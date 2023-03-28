@@ -50,8 +50,10 @@ const Project = () => {
             <Container maxWidth='xl'>
                 <Stack gap='50px 0' alignItems='center'>
                     <Stack alignItems='center' gap='10px' ref={titleRef}>
-                        <Typography variant='h2'>My <Typography color='primary' variant='h2' component='span'>Projects</Typography></Typography>
-                        <Typography variant='desc' width={{ xs: '80%', md: '60%' }} textAlign='center' color='text.secondary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non doloremque ipsam impedit numquam at tenetur blanditiis. Quae, quam veniam vel necessitatibus ipsum rerum porro quisquam mollitia magnam corporis. Aliquam, tempora?</Typography>
+                        <Typography variant='h2'>My Feature <Typography color='primary' variant='h2' component='span'>Projects</Typography></Typography>
+                        <Typography variant='desc' width={{ xs: '80%', md: '60%' }} textAlign='center' color='text.secondary'>
+                            I have built quite a lot of projects during my work. There are some feature projects I have built. I hope you will enjoy it.
+                        </Typography>
                     </Stack>
                     <Grid container spacing={5} justifyContent='center'>
                         {

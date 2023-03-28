@@ -47,7 +47,9 @@ const Service = () => {
                 <Stack gap={{ xs: '40px 0', md: '80px 0' }} alignItems='center'>
                     <Stack alignItems='center' gap='10px' ref={titleRef}>
                         <Typography variant='h2'>My <Typography color='primary' variant='h2' component='span'>Services</Typography></Typography>
-                        <Typography variant='desc' width={{ xs: '80%', md: '60%' }} textAlign='center' color='text.secondary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non doloremque ipsam impedit numquam at tenetur blanditiis. Quae, quam veniam vel necessitatibus ipsum rerum porro quisquam mollitia magnam corporis. Aliquam, tempora?</Typography>
+                        <Typography variant='desc' width={{ xs: '80%', md: '60%' }} textAlign='center' color='text.secondary'>
+                            Our services include web development, UI/UX design, and mobile development. We believe that the digital experiences you create should be both beautiful and functional. That's why we offer a comprehensive suite of digital services to help you bring your vision to life.
+                        </Typography>
                     </Stack>
                     <Grid container spacing={{ xs: 2, md: 4 }} ref={serviceRef}>
                         {

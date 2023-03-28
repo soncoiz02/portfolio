@@ -27,21 +27,21 @@ const Contact = () => {
                     <Stack width={{ xs: '100%', md: '50%' }} gap='30px 0'>
                         <Stack gap='10px' width='100%' ref={titleRef}>
                             <Typography variant='h2'>My <Typography color='primary' variant='h2' component='span'>Contact</Typography></Typography>
-                            <Typography variant='desc' color='text.secondary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non doloremque ipsam impedit numquam at tenetur blanditiis. Quae, quam veniam vel necessitatibus ipsum rerum porro quisquam mollitia magnam corporis. Aliquam, tempora?</Typography>
+                            <Typography variant='desc' color='text.secondary'>You can contact me through the ways below. Or fill out the form and send me a message.</Typography>
                         </Stack>
                         <Stack gap='20px 0' className='list-info'>
                             <Stack direction='row' gap='0 10px' alignItems='center' className='info'>
-                                <FontAwesomeIcon icon={faPhone} color={theme.palette.primary.main} fontSize='24px' />
+                                <FontAwesomeIcon icon={faPhone} color='#fcb772' fontSize='24px' />
                                 <Divider orientation='vertical' />
                                 <Typography variant='h5'>+84 0911998563</Typography>
                             </Stack>
                             <Stack direction='row' gap='0 10px' alignItems='center' className='info'>
-                                <FontAwesomeIcon icon={faEnvelope} color={theme.palette.primary.main} fontSize='24px' />
+                                <FontAwesomeIcon icon={faEnvelope} color='#fc7972' fontSize='24px' />
                                 <Divider orientation='vertical' />
                                 <Typography variant='h5'>sontb02.work@gmail.com</Typography>
                             </Stack>
                             <Stack direction='row' gap='0 10px' alignItems='center' className='info'>
-                                <FontAwesomeIcon icon={faFacebookSquare} color={theme.palette.primary.main} fontSize='24px' />
+                                <FontAwesomeIcon icon={faFacebookSquare} color='#72a7fc' fontSize='24px' />
                                 <Divider orientation='vertical' />
                                 <Typography variant='h5'>facebook.com/soncoiz02</Typography>
                             </Stack>

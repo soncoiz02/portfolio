@@ -173,7 +173,9 @@ const Skill = () => {
                 <Stack py={3} alignItems='center' gap='30px 0'>
                     <Stack alignItems='center' gap='10px' ref={titleRef}>
                         <Typography variant='h2'>My <Typography color='primary' variant='h2' component='span'>Skills</Typography></Typography>
-                        <Typography variant='desc' width={{ xs: '80%', md: '60%' }} textAlign='center' color='text.secondary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non doloremque ipsam impedit numquam at tenetur blanditiis. Quae, quam veniam vel necessitatibus ipsum rerum porro quisquam mollitia magnam corporis. Aliquam, tempora?</Typography>
+                        <Typography variant='desc' width={{ xs: '80%', md: '60%' }} textAlign='center' color='text.secondary'>
+                            Below are the technologies and tools that I am using to build and implement the products
+                        </Typography>
                     </Stack>
                     <Stack alignItems='center' gap='20px 0'>
                         <Tabs value={tabValue} onChange={handleChange} sx={{
