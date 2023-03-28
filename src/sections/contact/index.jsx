@@ -30,17 +30,17 @@ const Contact = () => {
                             <Typography variant='desc' color='text.secondary'>You can contact me through the ways below. Or fill out the form and send me a message.</Typography>
                         </Stack>
                         <Stack gap='20px 0' className='list-info'>
-                            <Stack direction='row' gap='0 10px' alignItems='center' className='info'>
+                            <Stack direction='row' gap='0 10px' alignItems='center' className='info' alignSelf='flex-start'>
                                 <FontAwesomeIcon icon={faPhone} color='#fcb772' fontSize='24px' />
                                 <Divider orientation='vertical' />
                                 <Typography variant='h5'>+84 0911998563</Typography>
                             </Stack>
-                            <Stack direction='row' gap='0 10px' alignItems='center' className='info'>
+                            <Stack direction='row' gap='0 10px' alignItems='center' className='info' alignSelf='flex-start'>
                                 <FontAwesomeIcon icon={faEnvelope} color='#fc7972' fontSize='24px' />
                                 <Divider orientation='vertical' />
                                 <Typography variant='h5'>sontb02.work@gmail.com</Typography>
                             </Stack>
-                            <Stack direction='row' gap='0 10px' alignItems='center' className='info'>
+                            <Stack direction='row' gap='0 10px' alignItems='center' className='info' alignSelf='flex-start'>
                                 <FontAwesomeIcon icon={faFacebookSquare} color='#72a7fc' fontSize='24px' />
                                 <Divider orientation='vertical' />
                                 <Typography variant='h5'>facebook.com/soncoiz02</Typography>

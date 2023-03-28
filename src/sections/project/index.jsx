@@ -25,16 +25,6 @@ const projectData = [
     },
 ]
 
-const desktopTransistion = {
-    from: { opacity: 0, x: 50 },
-    to: { opacity: 1, x: 0, duration: 1.5, stagger: 0.3 }
-}
-
-const mobileTransistion = {
-    from: { opacity: 0, y: 50 },
-    to: { opacity: 1, y: 0, duration: 1.5, stagger: 0.3 }
-}
-
 const Project = () => {
     const titleRef = useRef(null)
     const theme = useTheme()
@@ -43,7 +33,7 @@ const Project = () => {
     useEffect(() => {
         const titleEl = titleRef.current
         gsap.fromTo(titleEl, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1.5, scrollTrigger: { trigger: titleEl } })
-        gsap.fromTo('.project-item', { ...(matches ? desktopTransistion.from : mobileTransistion.from) }, { ...(matches ? desktopTransistion.to : mobileTransistion.to), scrollTrigger: { trigger: titleEl } })
+        gsap.fromTo('.project-item', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.5, stagger: 0.3, scrollTrigger: { trigger: titleEl } })
     }, [])
     return (
         <Box sx={{ py: { xs: '40px', md: '80px' } }} id='project'>
