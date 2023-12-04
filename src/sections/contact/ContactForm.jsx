@@ -7,24 +7,37 @@ import MainButton from '../../components/MainButton'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import emailjs from '@emailjs/browser';
+
 gsap.registerPlugin(ScrollTrigger)
 
 const ContactForm = () => {
+    const coverFormRef = useRef(null)
     const formRef = useRef(null)
     const theme = useTheme()
 
     const methods = useForm({
         defaultValues: {
-            fullname: '',
-            email: '',
+            user_name: '',
+            user_email: '',
             message: ''
         }
     })
 
-    const { handleSubmit, register } = methods
+    const { handleSubmit, register, reset, formState: { isValid } } = methods
 
-    const onSubmit = (values) => {
-        console.log(values);
+    const onSubmit = () => {
+        handleSendEmail(formRef.current)
+    }
+
+    const handleSendEmail = async (emailData) => {
+        try {
+            const result = await emailjs.sendForm('service_07ln17q', 'template_tamcfw5', emailData, 'uCW7C_Pq-oq2Uohsg')
+            console.log(result);
+            reset()
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     useEffect(() => {
@@ -35,13 +48,13 @@ const ContactForm = () => {
 
 
     return (
-        <Stack alignItems='center' width={{ xs: '100%', md: '50%' }} pt={3} gap='20px 0' ref={formRef}>
+        <Stack alignItems='center' width={{ xs: '100%', md: '50%' }} pt={3} gap='20px 0' ref={coverFormRef}>
             <Typography variant='h2'>Send me an <Typography component='span' color='primary' variant='h2'>Message</Typography></Typography>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} ref={formRef}>
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
                         <CssTextField
-                            {...register('fullname')}
+                            {...register('user_name')}
                             fullWidth
                             label='Fullname'
                             placeholder='ex: Tran Son'
@@ -57,7 +70,7 @@ const ContactForm = () => {
                     </Grid>
                     <Grid item xs={6}>
                         <CssTextField
-                            {...register('email')}
+                            {...register('user_email')}
                             fullWidth
                             label='Email'
                             placeholder='ex: abc@gmail.com'
@@ -84,7 +97,7 @@ const ContactForm = () => {
                     </Grid>
                     <Grid item xs={12}>
                         <Stack>
-                            <MainButton className='submit-btn' type='submit' colorType='primary' customStyle={{ alignSelf: { xs: 'center', md: 'flex-end' }, px: 5 }}>Send</MainButton>
+                            <MainButton disabled={!isValid} className='submit-btn' type='submit' colorType='primary' customStyle={{ alignSelf: { xs: 'center', md: 'flex-end' }, px: 5 }}>Send</MainButton>
                         </Stack>
                     </Grid>
                 </Grid>
